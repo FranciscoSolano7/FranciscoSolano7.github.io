@@ -16,6 +16,7 @@ header
 {
     width: 100%;
     height: 15%;
+    display: flex;
     align-items: center;
     justify-content: space-around;
     color: white;
@@ -24,7 +25,13 @@ header
 {
     width: 50%;
     height: 100%;
-
+    display: flex;
+    flex-direction: row;
+}
+ul
+{
+    list-style-type: none;
+    display: inline;
 }
 
 main
@@ -33,7 +40,26 @@ main
     height: 75%;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     color: white;
+}
+.nombre
+{
+    grid-area: 1/1/2/2;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-content: center;  
+}
+.text
+{
+    width: 80%;
+    height: 80%;  
+}
+.foto_perfil
+{
+    grid-area: 1/2/2/3;
+    display: flex;
 }
 footer
 {
