@@ -40,8 +40,14 @@ main
     height: 75%;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(2, 1fr);
     color: white;
+}
+.class
+{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .nombre
 {
