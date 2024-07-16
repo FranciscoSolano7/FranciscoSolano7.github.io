@@ -9,6 +9,7 @@ body
     width: 100vw;
     height: 100vh;
     margin: 0;
+    overflow-x: hidden;
     background-color: var(--azul_oscuro);
 }
 
@@ -17,21 +18,25 @@ header
     width: 100%;
     height: 15%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
     color: white;
 }
 .nav_bar
 {
-    width: 50%;
+    width: 70%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
 }
 ul
 {
     list-style-type: none;
-    display: inline;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+
+    font-size: 70%;
 }
 
 main
@@ -39,10 +44,11 @@ main
     width: 100%;
     height: 75%;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     color: white;
     gap: 2%;
 }
+/*Primera seccion de main*/
 .presentacion
 {
     grid-row-start: 1;
@@ -69,6 +75,7 @@ main
     display: flex;
 }
 
+/*Segunda seccion del main*/
 .quien_soy
 {
     grid-row-start: 2;
@@ -76,9 +83,44 @@ main
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.foto_perfil
+.quien_soy_ft
 {
-    grid-area: 1/2/2/3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+}
+
+/*Tercera seccion del main*/
+.donde_vengo
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.donde_vengo_ft
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+}
+.donde_vengo_txt
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+/*Ultima seccion*/
+.que_hice
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.que_hice_ft
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: flex;
 }
 footer
