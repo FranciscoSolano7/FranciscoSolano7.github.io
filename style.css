@@ -2,9 +2,14 @@
 {
     --verde_principal: #003C43;
     --azul_oscuro: #12161D;
-    --verdecito: #145A32 ;
+    --verdecito: #399918 ;
 }
 
+::-webkit-scrollbar 
+{
+    display: none; 
+ }
+  
 body
 {
     width: 100vw;
@@ -14,7 +19,13 @@ body
     grid-template-rows: 1fr, auto, 1fr;
     gap: 2%;
     overflow-x: hidden;
-    background-color: var(--azul_oscuro);
+    background: rgb(46,51,71);
+    background: radial-gradient(circle, rgba(46,51,71,1) 0%, rgba(15,15,28,1) 100%);
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
 
 header
@@ -23,8 +34,14 @@ header
     align-items: flex-end;
     justify-content: space-around;
     color: white;
+    z-index: 1;
 }
 .title
+{
+    color: var(--verdecito);
+    font-size: 150% ;
+}
+h1
 {
     color: var(--verdecito);
 }
@@ -35,12 +52,16 @@ header
     display: flex;
     justify-content: flex-end;
     align-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 5%;
 
     text-decoration: none;
     color: white;
 }
 ul
 {
+    width: 40%;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -56,14 +77,14 @@ ul
 }
 .nav_bar a:hover
 {
-    color: var(--verdecito);
+    color: green;
     text-decoration: underline;
 }
 
 main
 {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     color: white;
     gap: 2%;
 }
@@ -79,20 +100,25 @@ main
 {
     grid-area: 1/1/2/2;
     display: flex;
-    text-align: left;
+    text-align: right;
     justify-content: center;
-    align-content: center;  
+    align-content: flex-end;  
 }
 .text
 {
     width: 80%;
-    height: 80%;  
+    height: 80%;
+    font-size: 120%;
 }
 .foto_perfil
 {
     grid-area: 1/2/2/3;
     display: flex;
     justify-content: center;
+}
+.foto_perfil img
+{
+    width: 70%;
 }
 
 /*Segunda seccion del main*/
@@ -119,21 +145,21 @@ main
 }
 
 /*Tercera seccion del main*/
-#donde_vengo
+#experiencia
 {
     grid-row-start: 3;
     grid-row-end: 4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.donde_vengo_ft
+.experiencia_ft
 {
     grid-column-start: 2;
     grid-column-end: 3;
     display: flex;
     justify-content: center;
 }
-.donde_vengo_txt
+.experiencia_txt
 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -143,21 +169,21 @@ main
     align-content: center;
 }
 /*Ultima seccion*/
-#que_hice
+#proyectos
 {
     grid-row-start: 4;
     grid-row-end: 5;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.que_hice_ft
+.proyectos_ft
 {
     grid-column-start: 1;
     grid-column-end: 2;
     display: flex;
     justify-content: center;
 }
-.que_hice_txt
+.proyectos_txt
 {
     display: flex;
     text-align: left;
@@ -166,6 +192,7 @@ main
 }
 footer
 {
+    z-index: 1;
     align-items: center;
     justify-content: space-around;
     color: white;
